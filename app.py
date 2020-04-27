@@ -16,10 +16,10 @@ def index():
     
 def dr(i):
 	switcher={
-	0:'Class 0 DR'
-	1:'Class 1 DR'
-	2:'Class 2 DR'
-	3:'Class 3 DR'
+	0:'Class 0 DR',
+	1:'Class 1 DR',
+	2:'Class 2 DR',
+	3:'Class 3 DR',
 	4:'Class 4 DR'
 	}
 	return switcher.get(i,'Invalid')
