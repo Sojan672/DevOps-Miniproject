@@ -13,6 +13,16 @@ print('App loaded.')
 def index():
     # Main page
     return render_template('index.html')
+    
+def dr(i):
+	switcher={
+	0:'Class 0 DR'
+	1:'Class 1 DR'
+	2:'Class 2 DR'
+	3:'Class 3 DR'
+	4:'Class 4 DR'
+	}
+	return switcher.get(i,'Invalid')
 
 
 @app.route('/predict', methods=['GET', 'POST'])
@@ -20,7 +30,9 @@ def index():
 def predict():
     if request.method == 'POST':
         # Get the image from post request
-        ans_mode = "Flask is more important than model!! Dang!"
+        num=random.randint(0,4)
+        ans_mod=dr(num)
+        'ans_mode = "Flask is more important than model!! Dang!"
         return jsonify(result=str(ans_mode))
     return None
 
