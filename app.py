@@ -32,7 +32,7 @@ def predict():
     if request.method == 'POST':
         # Get the image from post request
         num=random.randint(0,4)
-        ans_mod=dr(num)
+        ans_mod=str(dr(num))
         
         return jsonify(result=str(ans_mode))
     return None
